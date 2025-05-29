@@ -1,59 +1,83 @@
 {
-	"$schema": "./node_modules/nx/schemas/nx-schema.json",
-	"defaultBase": "origin/main",
-	"namedInputs": {
-		"sharedGlobals": [
-			"{workspaceRoot}/nx.json",
-			"{workspaceRoot}/biome.json",
-			"{workspaceRoot}/package.json"
-		],
-		"default": ["{projectRoot}/**/*", "sharedGlobals"]
-	},
-	"targetDefaults": {
-		"serve": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true
-		},
-		"build": {
-			"dependsOn": ["^build", "typecheck"],
-			"inputs": ["default"],
-			"cache": true
-		},
-		"typecheck": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true,
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"command": "tsc -b"
-			}
-		},
-		"lint": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true,
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"command": "biome lint"
-			},
-			"configurations": {
-				"fix": {
-					"command": "biome lint --fix"
-				}
-			}
-		},
-		"test": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true,
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"command": "vitest"
-			}
-		}
-	}
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "origin/main",
+  "namedInputs": {
+    "sharedGlobals": [
+      "{workspaceRoot}/nx.json",
+      "{workspaceRoot}/biome.json",
+      "{workspaceRoot}/package.json"
+    ],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ]
+  },
+  "targetDefaults": {
+    "serve": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default"
+      ],
+      "cache": true
+    },
+    "build": {
+      "dependsOn": [
+        "^build",
+        "typecheck"
+      ],
+      "inputs": [
+        "default"
+      ],
+      "cache": true
+    },
+    "typecheck": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default"
+      ],
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "tsc -b"
+      }
+    },
+    "lint": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default"
+      ],
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "biome lint"
+      },
+      "configurations": {
+        "fix": {
+          "command": "biome lint --fix"
+        }
+      }
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default"
+      ],
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "vitest"
+      }
+    }
+  }
 }

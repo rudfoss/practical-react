@@ -36,3 +36,5 @@ Thumbs.db
 
 # The database created by the backend api
 jsonDb.json
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
