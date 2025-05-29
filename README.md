@@ -3,7 +3,7 @@
 👋 Welcome to the repository for the workshop [Practical React with TypeScript](https://www.bouvet.no/kurs/kategorier/utvikling-for-web-og-mobil/workshop-praktisk-react-med-typescript)!
 
 > [!TIP]
-> A branch will be created for the specific course named `courses/[date]`. The date is the month the course started in e.g.: `courses/202412`. This branch will contain the entire commit history for the course as well as **the slide deck**.
+> A branch will be created for the specific course named `courses/[date]`. The date is the month the course started in e.g.: `courses/202506`. This branch will contain the entire commit history for the course as well as **the slide deck**.
 
 - [Prerequisites](#prerequisites)
 	- [Git](#git)
@@ -36,8 +36,8 @@ How to install Git depends on the Operating System you use. Follow the instructi
 Once it is installed you can verify that everything is working by opening a terminal and typing `git --version`. You should see something similar to this (version number may differ):
 
 ```bash
-$ git --version
-git version 2.48.1.windows.1
+git --version
+git version 2.49.0.windows.1
 ```
 
 ### Node.js LTS
@@ -49,27 +49,22 @@ How to install Node depends on the Operating System you use. Follow the instruct
 Once it is installed you can verify that everything is working by opening a terminal and typing `node --version`. You should see something similar to this (version number may differ):
 
 ```bash
-$ node --version
-v22.14.0
+node --version
+v22.16.0
 ```
 
 ### Pnpm
 
 Node comes with a package manager called `npm`, but this course will be using an [optimized](https://pnpm.io/motivation) package manager called [`Pnpm`](https://pnpm.io). From the outside they are very similar and most commands will be familiar to you if you've used `npm` before. We will go through all the commands you need during the course.
 
-How to install Node depends on the Operating System you use. Follow the instructions on the [Pnpm page](https://pnpm.io/installation). It is recommended that you use [Corepack](https://pnpm.io/installation#using-corepack) to install Pnpm as it will automatically use the appropriate tool for the workspace. Corepack can be installed using a few simple commands:
+The easiest way to install pnpm is to use [Corepack](https://pnpm.io/installation#using-corepack). Corepack is a small utility that can read and install the workspace preferred package manager directly from `package.json`. To use it simply install it and enable pnpm as a package manager:
 
 ```bash
-$ npm install --global corepack@latest
-$ corepack enable pnpm
+npm install --global corepack@latest
+corepack enable pnpm
 ```
 
-Once it is installed you can verify that everything is working by opening a terminal and typing `pnpm --version`. You should see something similar to this (version number may differ):
-
-```bash
-$ pnpm --version
-10.8.1
-```
+Once it is installed it should automatically determine the appropriate package manager and version when you open the workspace during the [cloning stage](#cloning-the-repository)
 
 ### VSCode
 
@@ -80,22 +75,20 @@ Our primary IDE will be [VS Code (Visual Studio Code)](https://code.visualstudio
 To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the repository to our machine. We will do this at the start of the course, but you can also do this in advance if you want to get a small head start 🚀. To clone the repository open a terminal in the folder where you wish to store it and run this command:
 
 ```bash
-$ git clone https://github.com/rudfoss/practical-react-with-typescript.git prwt
+git clone https://github.com/rudfoss/practical-react.git
 ```
-
-The `prwt` argument tells git to create a new folder in the current directory named `prwt` and clone into it. If you leave this out git will create a folder name matching the repository name `practical-react-with-typescript` which is also perfectly fine, but a bit long so it may be useful to shorten it.
 
 Once you have cloned the repository navigate the terminal to the root folder and run the `first-time` script to install dependencies and verify:
 
 ```bash
-$ cd prwt # Change this to the folder name you chose to clone into
-$ pnpm run first-time # Install dependencies and verify that tools are installed
+cd practical-react # Change this to the folder name you chose to clone into
+pnpm run first-time # Install dependencies and verify that tools are installed
 ```
 
 If everything worked you can test the application by running this command and opening your browser to [`http://localhost:4200`](http://localhost:4200) and [`http://localhost:4000`](http://localhost:4000).
 
 ```bash
-$ pnpm exec nx run-many -t serve
+pnpm exec nx run-many -t serve
 ```
 
 You should see "Hello world" in one tab and a Swagger UI in another. To stop the commands focus in the terminal and type `Ctrl+C`.
