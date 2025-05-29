@@ -9,6 +9,6 @@
 		"./react": "./src/react/index.ts"
 	},
 	"devDependencies": {
-		"nswag": "^14.3.0"
+		"nswag": "^14.4.0"
 	}
 }

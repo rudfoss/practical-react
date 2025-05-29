@@ -1,5 +1,5 @@
 {
-	"editor.rulers": [110],
+	"editor.rulers": [80],
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "biomejs.biome",
 	"task.quickOpen.history": 0,
@@ -20,21 +20,6 @@
 
 	"files.associations": {
 		"*.env": "properties"
-	},
-
-	"files.exclude": {
-		"**/.*": false,
-		"**/dist": false,
-		"**/package.json": false,
-		"**/node_modules": false,
-		"pnpm-*.yaml": false,
-		"nx.json": false,
-		"**/biome.json": false,
-		"**/project.json": false,
-		"**/tsconfig*.json": false,
-		"**/vite.*": false,
-		"**/vitest.*": false,
-		"**/vite-env.d.ts": false
 	},
 
 	"[markdown]": {

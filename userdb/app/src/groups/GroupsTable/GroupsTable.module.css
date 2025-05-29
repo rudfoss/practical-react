@@ -1,9 +1,0 @@
-.table {
-	&.expanded td {
-		padding: 24px;
-	}
-
-	.highlighted {
-		background-color: hotpink;
-	}
-}
