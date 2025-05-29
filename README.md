@@ -3,7 +3,7 @@
 👋 Welcome to the repository for the workshop [Practical React with TypeScript](https://www.bouvet.no/kurs/kategorier/utvikling-for-web-og-mobil/workshop-praktisk-react-med-typescript)!
 
 > [!TIP]
-> A branch will be created for the specific course named `courses/[date]`. The date is the month the course started in e.g.: `courses/202412`. This branch will contain the entire commit history for the course as well as **the slide deck**.
+> A branch will be created for the specific course named `courses/[date]`. The date is the month the course started in e.g.: `courses/202506`. This branch will contain the entire commit history for the course as well as **the slide deck**.
 
 - [Prerequisites](#prerequisites)
 	- [Git](#git)
@@ -37,7 +37,7 @@ Once it is installed you can verify that everything is working by opening a term
 
 ```bash
 git --version
-git version 2.48.1.windows.1
+git version 2.49.0.windows.1
 ```
 
 ### Node.js LTS
@@ -50,26 +50,21 @@ Once it is installed you can verify that everything is working by opening a term
 
 ```bash
 node --version
-v22.14.0
+v22.16.0
 ```
 
 ### Pnpm
 
 Node comes with a package manager called `npm`, but this course will be using an [optimized](https://pnpm.io/motivation) package manager called [`Pnpm`](https://pnpm.io). From the outside they are very similar and most commands will be familiar to you if you've used `npm` before. We will go through all the commands you need during the course.
 
-How to install Node depends on the Operating System you use. Follow the instructions on the [Pnpm page](https://pnpm.io/installation). It is recommended that you use [Corepack](https://pnpm.io/installation#using-corepack) to install Pnpm as it will automatically use the appropriate tool for the workspace. Corepack can be installed using a few simple commands:
+The easiest way to install pnpm is to use [Corepack](https://pnpm.io/installation#using-corepack). Corepack is a small utility that can read and install the workspace preferred package manager directly from `package.json`. To use it simply install it and enable pnpm as a package manager:
 
 ```bash
 npm install --global corepack@latest
 corepack enable pnpm
 ```
 
-Once it is installed you can verify that everything is working by opening a terminal and typing `pnpm --version`. You should see something similar to this (version number may differ):
-
-```bash
-pnpm --version
-10.8.1
-```
+Once it is installed it should automatically determine the appropriate package manager and version when you open the workspace during the [cloning stage](#cloning-the-repository)
 
 ### VSCode
 
