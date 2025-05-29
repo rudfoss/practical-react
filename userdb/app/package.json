@@ -1,10 +1,10 @@
 {
-	"name": "@prwt/userdb-app",
+	"name": "@pr/userdb-app",
 	"version": "1.0.0",
 	"sideEffects": false,
 	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@prwt/libs-ui": "workspace:*"
+		"@pr/libs-ui": "workspace:*"
 	}
 }

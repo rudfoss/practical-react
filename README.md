@@ -82,7 +82,7 @@ Once you have cloned the repository navigate the terminal to the root folder and
 
 ```bash
 cd practical-react # Change this to the folder name you chose to clone into
-pnpm run first-time # Install dependencies and verify that tools are installed
+pnpm run init # Install dependencies and verify that tools are installed
 ```
 
 If everything worked you can test the application by running this command and opening your browser to [`http://localhost:4200`](http://localhost:4200) and [`http://localhost:4000`](http://localhost:4000).
