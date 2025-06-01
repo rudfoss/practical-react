@@ -1,7 +1,7 @@
 {
 	"name": "@pr/source",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Source code for the Practical React course @ https://www.bouvet.no/kurs/kategorier/utvikling-for-web-og-mobil/workshop-praktisk-react-med-typescript",
 	"main": "index.js",
 	"scripts": {
 		"init": "pnpm i --frozen-lockfile",
