@@ -12,13 +12,6 @@
 
 In this course we will be working with a [Pnpm Workspace](https://pnpm.io/workspaces) and [Nx](https://nx.dev/) managed [monorepo](https://monorepo.tools/). The devcontainer is already set up with all the necessary internal dependencies, but you will need to install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension for VScode to and clone the repository into a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) to get started.
 
-| Checklist | Prerequisite               |
-| :-------: | -------------------------- |
-|     ✅     | Git                        |
-|     ✅     | Node.js latest LTS version |
-|     ✅     | Pnpm package manager       |
-|     ✅     | Visual Studio Code         |
-
 ## Cloning the repository
 
 To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the repository to our machine. We will do this at the start of the course, but you can also do this in advance if you want to get a small head start 🚀. To clone the repository open a terminal in the folder where you wish to store it and run this command:
