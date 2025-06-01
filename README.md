@@ -29,7 +29,7 @@ In this course we will be working with a [Pnpm Workspace](https://pnpm.io/worksp
 |     ✅     | [Visual Studio Code](#vscode)             |
 
 > [!TIP]
-> If you have a container environment on your machine you can switch to the branch [`devcontainer`](https://github.com/rudfoss/practical-react/tree/devcontainer) to use a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) as your environment where all prerequisites are installed automatically.
+> If you have a container environment on your machine (like [Docker](https://www.docker.com) or [Podman](https://podman.io)) you can switch to the branch [`devcontainer`](https://github.com/rudfoss/practical-react/tree/devcontainer) to use a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) as your environment where all prerequisites are installed automatically.
 
 ### Git
 
