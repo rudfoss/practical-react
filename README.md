@@ -80,7 +80,7 @@ To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the
 git clone https://github.com/rudfoss/practical-react.git
 ```
 
-Once you have cloned the repository navigate the terminal to the root folder and run the `first-time` script to install dependencies and verify:
+Once you have cloned the repository navigate the terminal to the root folder and run the `init` script to install dependencies and verify:
 
 ```bash
 cd practical-react # Change this to the folder name you chose to clone into
