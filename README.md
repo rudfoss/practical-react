@@ -3,9 +3,6 @@
 <p align="center">
 👋 Welcome to the repository for the workshop <a href="https://www.bouvet.no/kurs/kategorier/utvikling-for-web-og-mobil/workshop-praktisk-react-med-typescript">Practical React with TypeScript</a>
 </p>
-<p align="center">
-<a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/rudfoss/practical-react/tree/devcontainer"><img src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue"</>
-</p>
 
 > [!TIP]
 > A branch will be created for the specific course named `courses/[date]`. The date is the month the course started in e.g.: `courses/202506`. This branch will contain the entire commit history for the course as well as **the slide deck**.
