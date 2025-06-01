@@ -1,16 +1,15 @@
 {
-	"name": "@prwt/source",
+	"name": "@pr/source",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Source code for the Practical React course @ https://www.bouvet.no/kurs/kategorier/utvikling-for-web-og-mobil/workshop-praktisk-react-med-typescript",
 	"main": "index.js",
 	"scripts": {
-		"verify": "git --version && node --version && pnpm --version",
-		"first-time": "pnpm i --frozen-lockfile && pnpm verify",
+		"init": "pnpm i --frozen-lockfile",
 		"update:npm": "npm-check-updates --interactive --format group -ws",
 		"update:nx1": "nx migrate latest",
 		"update:nx2": "nx migrate --run-migrations",
-		"pr": "nx affected -t typecheck,lint,test",
-		"pr:full": "nx run-many -t typecheck,lint,test,build"
+		"verify": "nx affected -t typecheck,lint,test,build",
+		"verify:full": "nx run-many -t typecheck,lint,test,build"
 	},
 	"keywords": [],
 	"author": "Thomas Haugland Rudfoss",

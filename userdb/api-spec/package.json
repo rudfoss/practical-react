@@ -1,5 +1,5 @@
 {
-	"name": "@prwt/userdb-api-spec",
+	"name": "@pr/userdb-api-spec",
 	"version": "1.0.0",
 	"sideEffects": false,
 	"private": true,
