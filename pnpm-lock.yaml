@@ -191,7 +191,7 @@ importers:
 
   userdb/app:
     dependencies:
-      '@prwt/libs-ui':
+      '@pr/libs-ui':
         specifier: workspace:*
         version: link:../../libs/ui
 

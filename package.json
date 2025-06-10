@@ -19,7 +19,7 @@
 		"node": ">=22",
 		"pnpm": ">=10"
 	},
-	"packageManager": "pnpm@10.11.0",
+	"packageManager": "pnpm@10.12.1",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@dotenvx/dotenvx": "^1.44.1",
