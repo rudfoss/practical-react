@@ -16,13 +16,13 @@ In this course we will be working with a [Pnpm Workspace](https://pnpm.io/worksp
 
 ## Cloning the repository
 
-To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the repository to our machine. We will do this at the start of the course, but you can also do this in advance if you want to get a small head start 🚀. To clone the repository open a terminal in the folder where you wish to store it and run this command:
+To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the repository to our machine. We will do this at the start of the course, but you can also do this in advance if you want a head start 🚀. To clone the repository open a terminal in the folder where you wish to store it and run this command:
 
 ```bash
 git clone https://github.com/rudfoss/practical-react.git
 ```
 
-Once the repository is cloned open the root folder in VSCode and, when prompted, open the workspace in a devcontainer.
+Once the repository is cloned open the root folder in VSCode and, when prompted, clone the workspace in a devcontainer.
 
 If everything worked you can test the application by running this command and opening your browser to [`http://localhost:4200`](http://localhost:4200) and [`http://localhost:4000`](http://localhost:4000).
 
