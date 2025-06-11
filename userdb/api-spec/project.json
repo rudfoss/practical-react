@@ -1,10 +1,10 @@
 {
-	"name": "userdb-api-spec",
+	"name": "userdb/api-spec",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "userdb/api-spec/src",
 	"projectType": "application",
 	"tags": ["product:userdb"],
-	"implicitDependencies": ["userdb-api"],
+	"implicitDependencies": ["userdb/api"],
 	"targets": {
 		"build": {
 			"dependsOn": ["^openApi"]

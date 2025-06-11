@@ -5,7 +5,8 @@
 		"sharedGlobals": [
 			"{workspaceRoot}/nx.json",
 			"{workspaceRoot}/biome.json",
-			"{workspaceRoot}/package.json"
+			"{workspaceRoot}/package.json",
+			"{workspaceRoot}/pnpm-lock.yaml"
 		],
 		"default": ["{projectRoot}/**/*", "sharedGlobals"]
 	},
