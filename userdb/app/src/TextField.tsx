@@ -20,7 +20,7 @@ export const TextField = ({
 }: TextFieldProps) => {
 	const id = useId()
 	return (
-		<>
+		<div>
 			<label htmlFor={id}>{label}</label>
 			<input
 				id={id}
@@ -29,6 +29,6 @@ export const TextField = ({
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
 			/>
-		</>
+		</div>
 	)
 }
