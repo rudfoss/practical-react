@@ -20,6 +20,7 @@ export const TextField = ({ label, disabled }: TextFieldProps) => {
 				id={id}
 				type="text"
 				disabled={disabled}
+				value={value}
 				onChange={(event) => onChange(event.target.value)}
 			/>
 			<p>Du skrev: {value}</p>
