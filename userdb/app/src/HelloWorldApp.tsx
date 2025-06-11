@@ -1,9 +1,10 @@
-import React from "react"
+import { Header } from "./Header"
 
 export const App = () => (
-	<h1>
-		Hello <strong>world</strong>
-	</h1>
+	<>
+		<Header prefix="🚀">Her er innholdet</Header>
+		<h1 title="foo">Her er innholdet</h1>
+	</>
 )
 
 // export const App2 = () =>
