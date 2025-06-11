@@ -1,20 +1,21 @@
 import { useId } from "react"
 
-interface TextFieldProps {
+export interface TextFieldProps {
 	label: string
+	disabled?: boolean
+	type?: "text" | "password"
 
 	value: string
 	/**
 	 * A function that is called every time the value changes.
 	 */
 	onChange: (newValue: string) => void
-
-	disabled?: boolean
 }
 
 export const TextField = ({
 	label,
 	value,
+	type = "text",
 	onChange,
 	disabled
 }: TextFieldProps) => {
@@ -24,7 +25,7 @@ export const TextField = ({
 			<label htmlFor={id}>{label}</label>
 			<input
 				id={id}
-				type="text"
+				type={type}
 				disabled={disabled}
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
