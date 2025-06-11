@@ -22,12 +22,17 @@ To work with the code we need to [clone](https://git-scm.com/docs/git-clone) the
 git clone https://github.com/rudfoss/practical-react.git
 ```
 
-Once the repository is cloned open the root folder in VSCode and, when prompted, clone the workspace in a devcontainer.
+Once the repository is cloned open the root folder in VSCode and, when prompted, clone the workspace in a devcontainer into a volume.
 
-If everything worked you can test the application by running this command and opening your browser to [`http://localhost:4200`](http://localhost:4200) and [`http://localhost:4000`](http://localhost:4000).
+![Clone into volume](docs/clone-into-volume.png)
+
+Once the container is set up completely you can test the application by running the `serve` target for all applicable applications and opening your browser to [`http://localhost:4200`](http://localhost:4200) and [`http://localhost:4000`](http://localhost:4000).
 
 ```bash
 pnpm exec nx run-many -t serve
 ```
+
+> [!NOTE]
+> If the browser does not respond verify that the ports `4000` and `4200` have been forwarded properly in the `Ports` panel in VSCode. If not add them to the list.
 
 You should see "Hello world" in one tab and a Swagger UI in another. To stop the commands focus in the terminal and type `Ctrl+C`.
