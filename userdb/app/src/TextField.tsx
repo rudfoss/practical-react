@@ -1,18 +1,24 @@
-import { useId, useState } from "react"
+import { useId } from "react"
 
 interface TextFieldProps {
 	label: string
+
+	value: string
+	/**
+	 * A function that is called every time the value changes.
+	 */
+	onChange: (newValue: string) => void
+
 	disabled?: boolean
 }
 
-export const TextField = ({ label, disabled }: TextFieldProps) => {
+export const TextField = ({
+	label,
+	value,
+	onChange,
+	disabled
+}: TextFieldProps) => {
 	const id = useId()
-	const [value, setValue] = useState("")
-
-	const onChange = (newValue: string) => {
-		setValue(newValue)
-	}
-
 	return (
 		<>
 			<label htmlFor={id}>{label}</label>
@@ -23,7 +29,6 @@ export const TextField = ({ label, disabled }: TextFieldProps) => {
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
 			/>
-			<p>Du skrev: {value}</p>
 		</>
 	)
 }
