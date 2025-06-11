@@ -4,7 +4,6 @@ onlyBuiltDependencies:
   - '@biomejs/biome'
   - '@swc/core'
   - esbuild
-  - nx
 
 ignoredBuiltDependencies:
   - "@scarf/scarf"
@@ -16,4 +15,3 @@ packages:
 allowedDeprecatedVersions:
   glob: "*"
   inflight: "*"
-

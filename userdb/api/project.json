@@ -1,5 +1,5 @@
 {
-	"name": "userdb-api",
+	"name": "userdb/api",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "userdb/api/src",
 	"projectType": "application",
@@ -21,7 +21,9 @@
 			"executor": "nx:run-commands",
 			"cache": true,
 			"inputs": ["default"],
-			"outputs": ["{workspaceRoot}/userdb/api-spec/src/json/userdb-api-openapi.json"],
+			"outputs": [
+				"{workspaceRoot}/userdb/api-spec/src/json/userdb-api-openapi.json"
+			],
 			"options": {
 				"cwd": "{projectRoot}",
 				"command": "nest start"
