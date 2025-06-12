@@ -1,5 +1,7 @@
 import { useId } from "react"
 
+import classes from "./CheckboxField.module.css"
+
 export interface CheckboxFieldProps {
 	label: string
 	disabled?: boolean
@@ -16,7 +18,7 @@ export const CheckboxField = ({
 }: CheckboxFieldProps) => {
 	const id = useId()
 	return (
-		<div>
+		<div className={classes.container}>
 			<input
 				id={id}
 				type="checkbox"

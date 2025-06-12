@@ -1,5 +1,7 @@
 import { useId } from "react"
 
+import classes from "./TextField.module.css"
+
 export interface TextFieldProps {
 	label: string
 	disabled?: boolean
@@ -21,7 +23,7 @@ export const TextField = ({
 }: TextFieldProps) => {
 	const id = useId()
 	return (
-		<div>
+		<div className={classes.container}>
 			<label htmlFor={id}>{label}</label>
 			<input
 				id={id}
