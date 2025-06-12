@@ -1,5 +1,5 @@
-import { PerfTest } from "./PerfTest"
+import { ObjectState } from "./ObjectState"
 
 export const App = () => {
-	return <PerfTest />
+	return <ObjectState />
 }
