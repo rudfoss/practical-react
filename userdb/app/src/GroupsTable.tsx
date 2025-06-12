@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { StaticGroup } from "./staticGroups"
 
+import classes from "./GroupsTable.module.css"
+
 type SortBy = "id" | "displayName"
 type SortDirection = "ascending" | "descending"
 
@@ -45,7 +47,7 @@ export const GroupsTable = ({
 	}
 
 	return (
-		<table>
+		<table className={classes.table}>
 			<thead>
 				<tr>
 					<th>
