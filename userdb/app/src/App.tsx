@@ -1,24 +1,9 @@
-import { useState } from "react"
-import { CheckboxField } from "./CheckboxField"
-import { PasswordField } from "./PasswordField"
+import { LoginForm } from "./LoginForm"
 
 export const App = () => {
-	const [password, setPassword] = useState("")
-	const [showPassword, setShowPassword] = useState(false)
+	const onLogin = (username: string, password: string) => {
+		console.log({ username, password })
+	}
 
-	return (
-		<>
-			<PasswordField
-				label="Password"
-				value={password}
-				onChange={setPassword}
-				showPassword={showPassword}
-			/>
-			<CheckboxField
-				label="Show password"
-				value={showPassword}
-				onChange={setShowPassword}
-			/>
-		</>
-	)
+	return <LoginForm onLogin={onLogin} />
 }
