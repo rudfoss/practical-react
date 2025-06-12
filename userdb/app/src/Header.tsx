@@ -8,11 +8,7 @@ interface HeaderProps {
 }
 
 // const { prefix = "Prefix:", children, suffix } = props
-export const Header = ({
-	prefix = "Prefix:",
-	children,
-	suffix
-}: HeaderProps) => (
+export const Header = ({ prefix, children, suffix }: HeaderProps) => (
 	<h1>
 		{prefix}
 		{children}
