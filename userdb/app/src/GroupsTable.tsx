@@ -5,10 +5,14 @@ type SortBy = "id" | "displayName"
 type SortDirection = "ascending" | "descending"
 
 export interface GroupsTableProps {
+	highlightedGroupIds?: string[]
 	groups: StaticGroup[]
 }
 
-export const GroupsTable = ({ groups }: GroupsTableProps) => {
+export const GroupsTable = ({
+	highlightedGroupIds = [],
+	groups
+}: GroupsTableProps) => {
 	const [sortBy, setSortBy] = useState<SortBy>()
 	const [sortDirection, setSortDirection] = useState<SortDirection>("ascending")
 
@@ -59,7 +63,14 @@ export const GroupsTable = ({ groups }: GroupsTableProps) => {
 			</thead>
 			<tbody>
 				{groups.map((group) => (
-					<tr key={group.id}>
+					<tr
+						key={group.id}
+						style={{
+							color: highlightedGroupIds.includes(group.id)
+								? "hotpink"
+								: undefined
+						}}
+					>
 						<td>{group.id}</td>
 						<td>{group.displayName}</td>
 						<td>{group.description}</td>
