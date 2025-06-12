@@ -2,6 +2,7 @@ import { useState } from "react"
 import { StaticGroup } from "./staticGroups"
 
 type SortBy = "id" | "displayName"
+type SortDirection = "ascending" | "descending"
 
 export interface GroupsTableProps {
 	groups: StaticGroup[]
@@ -9,29 +10,47 @@ export interface GroupsTableProps {
 
 export const GroupsTable = ({ groups }: GroupsTableProps) => {
 	const [sortBy, setSortBy] = useState<SortBy>()
+	const [sortDirection, setSortDirection] = useState<SortDirection>("ascending")
 
 	groups.sort((a, b) => {
+		const reverseDirection = sortDirection === "ascending" ? 1 : -1
+		let comparisonValue = 0
+
 		switch (sortBy) {
 			case "id":
-				return a.id.localeCompare(b.id)
+				comparisonValue = a.id.localeCompare(b.id)
+				break
 			case "displayName":
-				return a.displayName.localeCompare(b.displayName)
+				comparisonValue = a.displayName.localeCompare(b.displayName)
+				break
 		}
 
-		return 0
+		return comparisonValue * reverseDirection
 	})
+
+	const setSort = (columnName: SortBy) => {
+		if (sortBy === columnName) {
+			setSortDirection(
+				sortDirection === "ascending" ? "descending" : "ascending"
+			)
+			return
+		}
+
+		setSortBy(columnName)
+		setSortDirection("ascending")
+	}
 
 	return (
 		<table>
 			<thead>
 				<tr>
 					<th>
-						<button type="button" onClick={() => setSortBy("id")}>
+						<button type="button" onClick={() => setSort("id")}>
 							ID
 						</button>
 					</th>
 					<th>
-						<button type="button" onClick={() => setSortBy("displayName")}>
+						<button type="button" onClick={() => setSort("displayName")}>
 							Display name
 						</button>
 					</th>
