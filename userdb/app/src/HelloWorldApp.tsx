@@ -2,7 +2,6 @@ import { Header } from "./Header"
 
 export const App = () => (
 	<>
-		<Header prefix="🚀">Her er innholdet</Header>
 		<h1 title="foo">Her er innholdet</h1>
 	</>
 )

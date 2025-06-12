@@ -1,13 +1,15 @@
-import { render } from "@testing-library/react"
-import { describe, expect, it } from "vitest"
+import { cleanup, render, screen } from "@testing-library/react"
+import { afterEach, describe, expect, it } from "vitest"
 import { App } from "./HelloWorldApp"
 
 describe("App", () => {
+	afterEach(() => cleanup())
+
 	it("is defined", () => {
 		expect(typeof App).toEqual("function")
 	})
 	it("renders expected heading", () => {
-		const { getByRole } = render(<App />)
-		expect(getByRole("heading", { level: 1 })).toBeDefined()
+		render(<App />)
+		expect(screen.getByRole("heading", { level: 1 })).toBeDefined()
 	})
 })
