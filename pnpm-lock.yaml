@@ -208,6 +208,9 @@ importers:
       '@pr/libs-utils':
         specifier: workspace:*
         version: link:../../libs/utils
+      '@pr/userdb-api-spec':
+        specifier: workspace:*
+        version: link:../api-spec
 
 packages:
 
