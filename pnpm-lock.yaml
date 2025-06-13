@@ -88,6 +88,8 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3(@types/node@24.0.0)(jsdom@26.1.0)(terser@5.40.0)(tsx@4.20.0)(yaml@2.8.0)
 
+  libs/fields: {}
+
   libs/ui: {}
 
   libs/utils: {}
@@ -188,6 +190,9 @@ importers:
 
   userdb/app:
     dependencies:
+      '@pr/libs-fields':
+        specifier: workspace:*
+        version: link:../../libs/fields
       '@pr/libs-ui':
         specifier: workspace:*
         version: link:../../libs/ui

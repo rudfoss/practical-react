@@ -1,0 +1,12 @@
+{
+	"name": "libs/fields",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/fields/src",
+	"projectType": "library",
+	"tags": ["product:libs"],
+	"targets": {
+		"typecheck": {},
+		"lint": {},
+		"test": {}
+	}
+}

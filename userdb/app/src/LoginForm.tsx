@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react"
-import { CheckboxField } from "./CheckboxField"
-import { PasswordField } from "./PasswordField"
-import { TextField } from "./TextField"
+import { CheckboxField } from "./fields/CheckboxField/CheckboxField"
+import { PasswordField } from "./fields/TextField/PasswordField"
+import { TextField } from "./fields/TextField/TextField"
 
 export interface LoginFormProps {
 	disabled?: boolean

@@ -6,6 +6,7 @@
 	"type": "module",
 	"dependencies": {
 		"@pr/libs-ui": "workspace:*",
-		"@pr/libs-utils": "workspace:*"
+		"@pr/libs-utils": "workspace:*",
+		"@pr/libs-fields": "workspace:*"
 	}
 }

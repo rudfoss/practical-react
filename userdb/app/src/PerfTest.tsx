@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { HeavyOp } from "./HeavyOp"
-import { TextField } from "./TextField"
+import { TextField } from "./fields/TextField/TextField"
 
 export const PerfTest = () => {
 	const [text, setText] = useState("")
