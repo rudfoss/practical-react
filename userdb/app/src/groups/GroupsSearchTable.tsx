@@ -1,7 +1,6 @@
+import { CheckboxField, TextField } from "@pr/libs-fields"
 import { useState } from "react"
 import { GroupsTable } from "./GroupsTable"
-import { CheckboxField } from "./fields/CheckboxField/CheckboxField"
-import { TextField } from "./fields/TextField/TextField"
 import { queryGroup } from "./queryGroup"
 import { StaticGroup } from "./staticGroups"
 

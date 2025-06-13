@@ -1,5 +1,4 @@
-import { GroupsSearchTable } from "./GroupsSearchTable"
-import { staticGroups } from "./staticGroups"
+import { GroupsSearchTable, staticGroups } from "./groups"
 
 export const App = () => {
 	return (
