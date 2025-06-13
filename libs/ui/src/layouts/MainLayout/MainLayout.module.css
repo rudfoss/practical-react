@@ -1,0 +1,13 @@
+.columns {
+	display: flex;
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		gap: .3rem;
+		padding: 4px;
+		a {
+			display: block;
+		}
+	}
+}

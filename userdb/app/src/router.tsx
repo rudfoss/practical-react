@@ -1,6 +1,7 @@
+import { MainLayout } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { App } from "./App"
-import { MainLayout } from "./MainLayout"
+import { Menu } from "./Menu"
 
 const appRoutes: RouteObject[] = [
 	{
@@ -16,6 +17,6 @@ const appRoutes: RouteObject[] = [
 export const router = createBrowserRouter([
 	{
 		children: appRoutes,
-		element: <MainLayout />
+		element: <MainLayout heading="User Database" menu={<Menu />} />
 	}
 ])
