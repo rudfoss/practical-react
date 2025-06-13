@@ -2,7 +2,6 @@ import { MainLayout } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { App } from "./App"
 import { Menu } from "./Menu"
-import { GroupsPage } from "./pages/GroupsPage"
 
 const appRoutes: RouteObject[] = [
 	{
@@ -14,11 +13,15 @@ const appRoutes: RouteObject[] = [
 		children: [
 			{
 				index: true,
-				element: <GroupsPage />
+				lazy: {
+					Component: async () => (await import("./pages/GroupsPage")).GroupsPage
+				}
 			},
 			{
 				path: ":id",
-				element: <GroupsPage />
+				lazy: {
+					Component: async () => (await import("./pages/GroupsPage")).GroupsPage
+				}
 			}
 		]
 	}
