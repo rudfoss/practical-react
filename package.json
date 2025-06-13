@@ -44,6 +44,8 @@
 		"vitest": "^3.2.3"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "^5.80.7",
+		"@tanstack/react-query-devtools": "^5.80.7",
 		"date-fns": "^4.1.0",
 		"modern-normalize": "^3.0.1",
 		"nanoid": "^5.1.5",

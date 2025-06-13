@@ -1,12 +1,17 @@
-import { MainLayout, ProvideHeaderService } from "@pr/libs-ui"
+import { MainLayout } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { Menu } from "./Menu"
+import { ApiStatsPage } from "./pages/ApiStatsPage"
 import { HomePage } from "./pages/HomePage"
 
 const appRoutes: RouteObject[] = [
 	{
 		index: true,
 		element: <HomePage />
+	},
+	{
+		path: "stats",
+		element: <ApiStatsPage />
 	},
 	{
 		path: "groups",
@@ -30,10 +35,6 @@ const appRoutes: RouteObject[] = [
 export const router = createBrowserRouter([
 	{
 		children: appRoutes,
-		element: (
-			<ProvideHeaderService>
-				<MainLayout menu={<Menu />} />
-			</ProvideHeaderService>
-		)
+		element: <MainLayout menu={<Menu />} />
 	}
 ])
