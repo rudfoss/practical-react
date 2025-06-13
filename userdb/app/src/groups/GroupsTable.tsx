@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { StaticGroup } from "./staticGroups"
 
+import { Link } from "react-router-dom"
 import classes from "./GroupsTable.module.css"
 
 type SortBy = "id" | "displayName"
@@ -76,7 +77,11 @@ export const GroupsTable = ({
 						}}
 					>
 						<td>
-							{makeHref ? <a href={makeHref(group)}>{group.id}</a> : group.id}
+							{makeHref ? (
+								<Link to={makeHref(group)}>{group.id}</Link>
+							) : (
+								group.id
+							)}
 						</td>
 						<td>{group.displayName}</td>
 						<td>{group.description}</td>
