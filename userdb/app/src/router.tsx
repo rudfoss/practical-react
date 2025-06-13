@@ -1,12 +1,12 @@
-import { MainLayout } from "@pr/libs-ui"
+import { MainLayout, ProvideHeader } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
-import { App } from "./App"
 import { Menu } from "./Menu"
+import { HomePage } from "./pages/HomePage"
 
 const appRoutes: RouteObject[] = [
 	{
 		index: true,
-		element: <App />
+		element: <HomePage />
 	},
 	{
 		path: "groups",
@@ -30,6 +30,6 @@ const appRoutes: RouteObject[] = [
 export const router = createBrowserRouter([
 	{
 		children: appRoutes,
-		element: <MainLayout heading="User Database" menu={<Menu />} />
+		element: <MainLayout menu={<Menu />} />
 	}
 ])

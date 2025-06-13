@@ -2,13 +2,14 @@ import { ReactNode } from "react"
 import { Outlet } from "react-router-dom"
 
 import classes from "./MainLayout.module.css"
+import { useHeaderService } from "./headerService"
 
 export interface MainLayoutProps {
-	heading: string
 	menu: ReactNode
 }
 
-export const MainLayout = ({ heading, menu }: MainLayoutProps) => {
+export const MainLayout = ({ menu }: MainLayoutProps) => {
+	const { heading } = useHeaderService()
 	return (
 		<>
 			<header>
