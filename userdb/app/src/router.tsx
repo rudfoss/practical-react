@@ -1,5 +1,6 @@
-import { Outlet, RouteObject, createBrowserRouter } from "react-router-dom"
+import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { App } from "./App"
+import { MainLayout } from "./MainLayout"
 
 const appRoutes: RouteObject[] = [
 	{
@@ -15,19 +16,6 @@ const appRoutes: RouteObject[] = [
 export const router = createBrowserRouter([
 	{
 		children: appRoutes,
-		element: (
-			<>
-				<header>
-					<h1>Hello world!</h1>
-				</header>
-				<nav>
-					<a href="/">Home</a>
-					<a href="/test">Link</a>
-				</nav>
-				<main>
-					<Outlet />
-				</main>
-			</>
-		)
+		element: <MainLayout />
 	}
 ])
