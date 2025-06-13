@@ -2,6 +2,7 @@ import { MainLayout } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { Menu } from "./Menu"
 import { ApiStatsPage } from "./pages/ApiStatsPage"
+import { HealthPage } from "./pages/HealthPage"
 import { HomePage } from "./pages/HomePage"
 
 const appRoutes: RouteObject[] = [
@@ -12,6 +13,10 @@ const appRoutes: RouteObject[] = [
 	{
 		path: "stats",
 		element: <ApiStatsPage />
+	},
+	{
+		path: "health",
+		element: <HealthPage />
 	},
 	{
 		path: "groups",

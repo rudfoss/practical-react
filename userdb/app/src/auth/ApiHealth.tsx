@@ -1,8 +1,8 @@
 import { LoadingSpinner } from "@pr/libs-ui"
 import { useQuery } from "@tanstack/react-query"
 
-export const loadData = async () => {
-	const response = await fetch("http://localhost:4000/stats")
+const loadHealthData = async () => {
+	const response = await fetch("http://localhost:4000/health")
 	if (!response.ok)
 		throw new Error(
 			`Server responded with code ${response.status}: ${response.statusText}`
@@ -12,17 +12,17 @@ export const loadData = async () => {
 	return data
 }
 
-export const ApiStats = () => {
+export const ApiHealth = () => {
 	const { isLoading, data } = useQuery({
-		queryKey: ["stats"],
-		queryFn: loadData
+		queryKey: ["health"],
+		queryFn: loadHealthData
 	})
 
 	return (
 		<>
 			{isLoading && <LoadingSpinner />}
 			<pre>
-				<code>{JSON.stringify(data, undefined, 2)}</code>
+				<code>{data.bootTime}</code>
 			</pre>
 		</>
 	)
