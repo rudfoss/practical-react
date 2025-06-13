@@ -1,5 +1,3 @@
-import { Header } from "./Header"
-
 export const App = () => (
 	<>
 		<h1 title="foo">Her er innholdet</h1>
