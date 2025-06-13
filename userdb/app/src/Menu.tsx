@@ -1,6 +1,7 @@
 export const Menu = () => (
 	<>
 		<a href="/">Home</a>
+		<a href="/login">Login</a>
 		<a href="/stats">Stats</a>
 		<a href="/health">Health</a>
 		<a href="/groups">Groups</a>

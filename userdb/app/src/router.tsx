@@ -4,11 +4,16 @@ import { Menu } from "./Menu"
 import { ApiStatsPage } from "./pages/ApiStatsPage"
 import { HealthPage } from "./pages/HealthPage"
 import { HomePage } from "./pages/HomePage"
+import { LoginPage } from "./pages/LoginPage"
 
 const appRoutes: RouteObject[] = [
 	{
 		index: true,
 		element: <HomePage />
+	},
+	{
+		path: "login",
+		element: <LoginPage />
 	},
 	{
 		path: "stats",
