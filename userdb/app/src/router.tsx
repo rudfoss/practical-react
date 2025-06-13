@@ -2,6 +2,7 @@ import { MainLayout } from "@pr/libs-ui"
 import { RouteObject, createBrowserRouter } from "react-router-dom"
 import { App } from "./App"
 import { Menu } from "./Menu"
+import { GroupsPage } from "./pages/GroupsPage"
 
 const appRoutes: RouteObject[] = [
 	{
@@ -9,8 +10,17 @@ const appRoutes: RouteObject[] = [
 		element: <App />
 	},
 	{
-		path: "test",
-		element: <p>This is a test</p>
+		path: "groups",
+		children: [
+			{
+				index: true,
+				element: <GroupsPage />
+			},
+			{
+				path: ":id",
+				element: <GroupsPage />
+			}
+		]
 	}
 ]
 

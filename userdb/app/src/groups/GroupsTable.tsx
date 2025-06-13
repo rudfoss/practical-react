@@ -7,11 +7,13 @@ type SortBy = "id" | "displayName"
 type SortDirection = "ascending" | "descending"
 
 export interface GroupsTableProps {
+	makeHref?: (group: StaticGroup) => string
 	highlightedGroupIds?: string[]
 	groups: StaticGroup[]
 }
 
 export const GroupsTable = ({
+	makeHref,
 	highlightedGroupIds = [],
 	groups
 }: GroupsTableProps) => {
@@ -73,7 +75,9 @@ export const GroupsTable = ({
 								: undefined
 						}}
 					>
-						<td>{group.id}</td>
+						<td>
+							{makeHref ? <a href={makeHref(group)}>{group.id}</a> : group.id}
+						</td>
 						<td>{group.displayName}</td>
 						<td>{group.description}</td>
 					</tr>
