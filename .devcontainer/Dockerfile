@@ -2,19 +2,19 @@ FROM mcr.microsoft.com/devcontainers/base:dev-alpine3.23@sha256:44a07e62d6ac1a51
 ARG USERNAME=vscode
 
 RUN bash <<'EOF'
+# Install Zsh
+aok update
+apk add zsh
+EOF
+
+RUN bash <<'EOF'
 # Used to persist bash history as per https://code.visualstudio.com/remote/advancedcontainers/persist-bash-history
 set -e
-apt-get update
-apt-get install -y sshfs
 mkdir -p /commandhistory
 chown -R $USERNAME:$USERNAME /commandhistory
 touch /commandhistory/.zsh_history
 chown -R $USERNAME:$USERNAME /commandhistory/.zsh_history
 echo 'HISTFILE=/commandhistory/.zsh_history' >> /home/$USERNAME/.zshrc
-
-# Install Zsh
-rm -rf /root/.oh-my-zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 EOF
 
 USER $USERNAME
