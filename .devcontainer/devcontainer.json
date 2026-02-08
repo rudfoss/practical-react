@@ -21,7 +21,7 @@
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pnpm i --frozen-lockfile",
+	"postCreateCommand": "pnpm run init",
 
 	// Configure tool-specific properties.
 	"customizations": {
