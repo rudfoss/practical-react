@@ -25,5 +25,7 @@
 	"[markdown]": {
 		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
 	},
-	"cSpell.words": ["Haugland", "Rudfoss"]
+	"cSpell.words": ["Haugland", "Rudfoss"],
+	"workbench.remoteIndicator.showExtensionRecommendations": false,
+	"extensions.ignoreRecommendations": true
 }
