@@ -2,16 +2,16 @@
 	"editor.rulers": [80],
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "biomejs.biome",
-	"task.quickOpen.history": 0,
-
 	"editor.codeActionsOnSave": {
 		"source.fixAll.biome": "explicit",
 		"source.organizeImports.biome": "explicit"
 	},
 
+	"git.autofetch": true,
+
+	"task.quickOpen.history": 0,
 	"npm.packageManager": "pnpm",
 	"workbench.iconTheme": "vscode-icons",
-	"debug.javascript.autoAttachFilter": "disabled",
 
 	"search.exclude": {
 		"**/node_modules": true,
