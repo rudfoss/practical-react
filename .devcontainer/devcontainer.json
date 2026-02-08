@@ -21,7 +21,7 @@
 	"mounts": ["source=devcontainer-bashhistory,target=/commandhistory,type=volume"],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pnpm i --frozen-lockfile",
+	// "postCreateCommand": "pnpm i --frozen-lockfile",
 
 	// Configure tool-specific properties.
 	"customizations": {
