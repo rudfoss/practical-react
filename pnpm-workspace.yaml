@@ -1,17 +1,15 @@
-linkWorkspacePackages: true
+minimumReleaseAge: 2880
 
-onlyBuiltDependencies:
-  - '@biomejs/biome'
-  - '@swc/core'
-  - esbuild
+savePrefix: ""
 
-ignoredBuiltDependencies:
-  - "@scarf/scarf"
+minimumReleaseAgeExclude: []
+
+trustPolicy: no-downgrade
 
 packages:
-  - userdb/*
   - libs/*
+  - userdb/*
 
-allowedDeprecatedVersions:
-  glob: "*"
-  inflight: "*"
+linkWorkspacePackages: true
+
+onlyBuiltDependencies: []

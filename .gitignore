@@ -7,6 +7,7 @@ tmp
 
 # dependencies
 node_modules
+.pnpm-store
 
 # IDEs and editors
 /.idea
@@ -33,8 +34,3 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
-
-# The database created by the backend api
-jsonDb.json
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md

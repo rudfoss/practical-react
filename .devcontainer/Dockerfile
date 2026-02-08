@@ -1,5 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:alpine3.23@sha256:2ff82b3874eec11a87738d76d30c087bcd389499ea67af4505b50adea8469a9c
-# FROM mcr.microsoft.com/devcontainers/base:trixie
+FROM mcr.microsoft.com/devcontainers/base:trixie@sha256:a30da48cdf5f9144ff7f2156622e701e752fc258d77ca7bb00120624f1a95938
 ARG USERNAME=vscode
 
 RUN bash <<'EOF'
