@@ -1,9 +1,0 @@
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	img {
-		display: block;
-		flex: 0 0 auto;
-	}
-}

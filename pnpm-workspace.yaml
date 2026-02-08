@@ -1,15 +1,23 @@
+# Only allow dependencies that have been published for at least 2 days
 minimumReleaseAge: 2880
 
-savePrefix: ""
-
+# Exclude packages that have been published for less than 2 days
 minimumReleaseAgeExclude: []
 
+# Do not add a prefix when saving dependencies (no automated patch-version updates)
+savePrefix: ""
+
+# Do not allow downgrading dependencies, but allow patch and minor updates
 trustPolicy: no-downgrade
 
+# Product folders
 packages:
   - libs/*
   - userdb/*
 
+# Link local workspace packages instead of downloading them from the registry
 linkWorkspacePackages: true
 
+# Prevent any post install scripts from running
+ignoreScripts: true
 onlyBuiltDependencies: []
