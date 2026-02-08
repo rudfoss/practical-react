@@ -1,11 +1,5 @@
-FROM mcr.microsoft.com/devcontainers/base:dev-alpine3.23@sha256:44a07e62d6ac1a51ed0fe06c1381433a9c7798633fc66d6c9ae55ae3a4bddc51
+FROM mcr.microsoft.com/devcontainers/javascript-node:dev-24-bullseye@sha256:3965c50ff0473662331ac3c9092b73e1112ffd746c111e8d9b222060a2b8e8ea
 ARG USERNAME=vscode
-
-RUN bash <<'EOF'
-# Install Zsh
-aok update
-apk add zsh
-EOF
 
 RUN bash <<'EOF'
 # Used to persist bash history as per https://code.visualstudio.com/remote/advancedcontainers/persist-bash-history
