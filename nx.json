@@ -2,39 +2,39 @@
 	"$schema": "./node_modules/nx/schemas/nx-schema.json",
 	"defaultBase": "origin/main",
 	"namedInputs": {
-		"sharedGlobals": [
-			"{workspaceRoot}/nx.json",
-			"{workspaceRoot}/biome.json",
-			"{workspaceRoot}/package.json",
-			"{workspaceRoot}/pnpm-lock.yaml"
-		],
-		"default": ["{projectRoot}/**/*", "sharedGlobals"]
+		"source": ["{projectRoot}/src/**/*"],
+		"output": [{ "dependentTasksOutputFiles": "**/*" }],
+		"outputAll": [{ "dependentTasksOutputFiles": "**/*", "transitive": true }]
 	},
 	"targetDefaults": {
-		"serve": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true
-		},
 		"build": {
-			"dependsOn": ["^build", "typecheck"],
-			"inputs": ["default"],
-			"cache": true
-		},
-		"typecheck": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
 			"cache": true,
+			"inputs": ["source", "output"],
+			"outputs": ["{projectRoot}/dist/**"],
+			"dependsOn": ["^build"]
+		},
+		"test": {
+			"cache": true,
+			"inputs": ["source"],
 			"executor": "nx:run-commands",
 			"options": {
 				"cwd": "{projectRoot}",
-				"command": "tsc -b"
+				"command": "vitest"
+			}
+		},
+		"typecheck": {
+			"cache": true,
+			"inputs": ["source", "output"],
+			"dependsOn": ["^typecheck"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"command": "tsc --noEmit"
 			}
 		},
 		"lint": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
 			"cache": true,
+			"inputs": ["source"],
 			"executor": "nx:run-commands",
 			"options": {
 				"cwd": "{projectRoot}",
@@ -44,16 +44,6 @@
 				"fix": {
 					"command": "biome lint --fix"
 				}
-			}
-		},
-		"test": {
-			"dependsOn": ["^build"],
-			"inputs": ["default"],
-			"cache": true,
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"command": "vitest"
 			}
 		}
 	}
