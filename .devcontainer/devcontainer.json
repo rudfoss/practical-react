@@ -11,14 +11,16 @@
 			"version": "lts",
 			"nodeGypDependencies": true
 		},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": "false"
+		}
 	},
 	"mounts": [
 		"source=devcontainer-bashhistory,target=/commandhistory,type=volume"
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pnpm i --frozen-lockfile",
+	// "postCreateCommand": "pnpm i --frozen-lockfile",
 
 	// Configure tool-specific properties.
 	"customizations": {
